@@ -1,0 +1,49 @@
+body{
+    /* background-color: #EAF2FF; */
+    /* background-color: #f2f6fa; */
+    background-color: #F1F2F8;
+}
+
+/* *{
+    background-color: rgba(10, 194, 10, 0.123);
+} */
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.edit_input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.edit_input:hover {
+  border: none;
+  outline: none;
+}
+.edit_input:focus {
+  border: none;
+  outline: none;
+}
+
+
+button:disabled{
+  color: gray !important;
+}
+
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(169, 169, 169, 0.363);
+  /* outline: 1px solid slategrey; */
+}
