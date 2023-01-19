@@ -7,7 +7,8 @@ const initialState = {
     post_transaction_status: async_status.IDLE,
     edit_transaction_status: async_status.IDLE,
     delete_transaction_status: async_status.IDLE,
-    
+
+    graph_data:[],
     user_transaction:[],
     edit_transaction_data: '',
     edit_transaction_state: false,
@@ -44,6 +45,7 @@ const user_transactions_slice = createSlice({
         
         builder.addCase(get_user_transaction_async.fulfilled, (state, {payload}) => {
             state.user_transaction = payload.data
+            state.graph_data = payload.graph_data
             state.getting_user_transactions_status = async_status.SUCCEEDED
             state.getting_user_transactions_error = null
         })
@@ -63,6 +65,7 @@ const user_transactions_slice = createSlice({
         
         builder.addCase(add_user_transaction_async.fulfilled, (state, {payload}) => {
             state.user_transaction = payload.transactions
+            state.graph_data = payload.graph_data
             state.post_transaction_status = async_status.SUCCEEDED
             state.post_transaction_error = null
         })
@@ -81,6 +84,7 @@ const user_transactions_slice = createSlice({
         
         builder.addCase(update_user_transaction_async.fulfilled, (state, {payload}) => {
             state.user_transaction = payload.transactions
+            state.graph_data = payload.graph_data
             state.edit_transaction_status = async_status.SUCCEEDED
             state.post_transaction_error = null
             state.edit_transaction_state = false
@@ -105,6 +109,7 @@ const user_transactions_slice = createSlice({
         
         builder.addCase(delete_user_transaction_async.fulfilled, (state, {payload}) => {
             state.user_transaction = payload.transactions
+            state.graph_data = payload.graph_data
             state.delete_transaction_status = async_status.SUCCEEDED
             state.delete_transaction_error = null
         })

@@ -7,15 +7,6 @@ import { currency_format, date_formater } from '../../utils/common_functions'
 import { render_cards_data, assets_icon } from '../../utils/input_list'
 import { Icon_Button } from '../common.js/Icon_Button'
 
-// const data2 = {
-//   icon: assets_icon.saving,
-//   theme: render_cards_data.saving.theme,
-//   paid_from: 'saving',
-//   description: 'Description Description ',
-//   amount:'58.22', 
-//   createdAt:'2023-01-01T19:15:55.144+00:00',
-//   currency:'USD'
-// }
 
 export const Transaction_Card = ({ data, edit_handle, delete_handle }) => {
 
@@ -28,7 +19,6 @@ export const Transaction_Card = ({ data, edit_handle, delete_handle }) => {
 
 
 
-  // const { theme, icon } = data2
 
 
 

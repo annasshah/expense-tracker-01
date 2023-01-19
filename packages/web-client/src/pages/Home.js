@@ -24,12 +24,14 @@ export const Home = () => {
 
             <Paper_Container >
 
-              <Stack sx={{ height: 550 }}>
+              <Stack sx={{ height: 400, width:'100%' }}>
+                <Stack mb={3}>
                 <Typography color={text_color} fontWeight='bold'> Overview</Typography>
+                </Stack>
+                <Graph_Preview />
               </Stack>
 
 
-              <Graph_Preview />
 
 
             </Paper_Container>
@@ -40,8 +42,8 @@ export const Home = () => {
           <Grid item xs={12} sm={12} md={5} lg={4} xl={4} >
 
             <Paper_Container px={'0'} py={'0'}  >
-              <Stack my={3} sx={{ height: 550 }}>
-                  <Transaction_list />
+              <Stack my={3} sx={{ height: 400 }}>
+                <Transaction_list />
               </Stack>
 
             </Paper_Container>
